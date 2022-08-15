@@ -26,6 +26,7 @@ export const ALL_TAGS = [
   'validation',
   'yup',
   'zod',
+  'php',
 ] as const;
 
 export type Tags = typeof ALL_TAGS[number];
@@ -326,5 +327,11 @@ export const PACKAGES: Record<
     npmPackage: '@graphql-codegen/flutter-freezed',
     iconUrl: '/assets/img/icons/dart.svg',
     tags: ['plugin', 'dart', 'flutter'],
+  },
+  php: {
+    title: 'Php',
+    npmPackage: '@graphql-codegen/php',
+    iconUrl: '/assets/img/icons/php.svg',
+    tags: ['plugin', 'php'],
   },
 };

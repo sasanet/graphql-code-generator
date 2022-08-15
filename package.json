@@ -24,6 +24,7 @@
     "packages/utils/*",
     "packages/plugins/flow/*",
     "packages/plugins/java/*",
+    "packages/plugins/php/*",
     "packages/plugins/c-sharp/*",
     "packages/plugins/dart/*",
     "packages/plugins/typescript/*",

@@ -176,6 +176,11 @@ export const pluginsConfigurations: PluginConfig[] = [
     name: 'java',
   },
   {
+    file: '../packages/plugins/php/php/src/config.ts',
+    identifier: 'PhpTypesPluginRawConfig',
+    name: 'php',
+  },
+  {
     file: '../packages/plugins/java/kotlin/src/config.ts',
     identifier: 'KotlinResolversPluginRawConfig',
     name: 'kotlin',

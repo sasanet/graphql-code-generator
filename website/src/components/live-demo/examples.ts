@@ -477,6 +477,17 @@ export const EXAMPLES = {
       schema: TS_SCHEMA,
     },
   ],
+  Php: [
+    {
+      name: 'Types (Enum & Input)',
+      tags: ['java', 'backend'],
+      config: `generates:
+  src/my/app/generated/Types.php:
+    plugins:
+      - php`,
+      schema: TS_SCHEMA,
+    },
+  ],
   Java: [
     {
       name: 'Types (Enum & Input)',
