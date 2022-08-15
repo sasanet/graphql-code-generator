@@ -7,7 +7,7 @@ import {
   getBaseTypeNode,
   buildScalarsFromConfig,
 } from '@graphql-codegen/visitor-plugin-common';
-import { PhpResolversPluginRawConfig } from './config';
+import { PhpTypesPluginRawConfig } from './config';
 import {
   GraphQLSchema,
   EnumTypeDefinitionNode,
@@ -33,8 +33,8 @@ export interface PhpResolverParsedConfig extends ParsedConfig {
   useEmptyCtor: boolean;
 }
 
-export class PhpResolversVisitor extends BaseVisitor<PhpResolversPluginRawConfig, PhpResolverParsedConfig> {
-  constructor(rawConfig: PhpResolversPluginRawConfig, private _schema: GraphQLSchema, defaultNamespace: string) {
+export class PhpTypesVisitor extends BaseVisitor<PhpTypesPluginRawConfig, PhpResolverParsedConfig> {
+  constructor(rawConfig: PhpTypesPluginRawConfig, private _schema: GraphQLSchema, defaultNamespace: string) {
     super(rawConfig, {
       immutableTypes: true,
       enumValues: rawConfig.enumValues || {},

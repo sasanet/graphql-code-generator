@@ -4,7 +4,7 @@ import { plugin } from '../src';
 import { validatePhp } from '../../common/test/validate-php';
 import { mergeOutputs } from '@graphql-codegen/plugin-helpers';
 
-const OUTPUT_FILE = 'php/generated/resolvers.php';
+const OUTPUT_FILE = 'php/generated/types.php';
 
 describe('Php', () => {
   const schema = buildSchema(/* GraphQL */ `
@@ -16,6 +16,12 @@ describe('Php', () => {
       searchUser(searchFields: SearchUser!): [User!]!
       updateUser(input: UpdateUserMetadataInput!): [User!]!
       authorize(roles: [UserRole]): Boolean
+    }
+
+    fragment UserEssential on User {
+      id
+      username
+      email
     }
 
     input InputWithArray {
@@ -59,7 +65,7 @@ describe('Php', () => {
       id: ID!
     }
 
-    type User implements Node {
+    type User {
       id: ID!
       username: String!
       email: String!
@@ -68,7 +74,7 @@ describe('Php', () => {
       friends(skip: Int, limit: Int): [User!]!
     }
 
-    type Chat implements Node {
+    type Chat {
       id: ID!
       users: [User!]!
       title: String

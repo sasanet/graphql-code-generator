@@ -3,7 +3,7 @@ import { RawConfig, EnumValuesMap } from '@graphql-codegen/visitor-plugin-common
 /**
  * @description You can use this plugin to generate Java enums based on your GraphQL schema, and it also generates a type-safe Java transformer for GraphQL `input` types.
  */
-export interface PhpResolversPluginRawConfig extends RawConfig {
+export interface PhpTypesPluginRawConfig extends RawConfig {
   /**
    * @description Customize the class members prefix. The default is empty (this might be a breaking change from the default that was _)
    *

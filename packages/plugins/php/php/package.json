@@ -18,7 +18,6 @@
     "test": "jest --no-watchman --config ../../../../jest.config.js"
   },
   "dependencies": {
-    "@graphql-codegen/php-common": "^2.2.3",
     "@graphql-codegen/plugin-helpers": "^2.6.2",
     "@graphql-codegen/visitor-plugin-common": "2.12.1",
     "tslib": "~2.4.0"
